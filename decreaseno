@@ -1,0 +1,12 @@
+def decrease(no):
+    if(no == 0):
+        return
+    print(no)
+    decrease(no-1)
+    
+def main():
+    no = 5
+    decrease(no)
+    
+if __name__ == "__main__":
+    main()
