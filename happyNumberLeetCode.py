@@ -1,7 +1,19 @@
 def main():
-    n = 68
+    n = 10000
+    temp = n
     no = None
-    print(happyNum(n,no))
+    sets = set()
+    while True:
+        
+        temp = happyNum(temp,no)
+        try:
+            sets.remove(temp)
+            return False
+        except:
+            sets.add(temp)
+        if temp==1:
+            return True
+        
     
 def happyNum(n,no):
     if(n==0):
@@ -12,4 +24,4 @@ def happyNum(n,no):
     sums = no*no + sums
     return sums
 if __name__ == '__main__':
-    main()
+    print(main())
